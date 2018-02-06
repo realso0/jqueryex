@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<ul>
+		<li id="first">텍스트1 텍스트1 텍스트1 텍스트1 텍스트1</li> <!-- 옆에 처럼, 유일한 id를 가져야 함. -->
+		<li id="second">텍스트2 텍스트2 텍스트2 텍스트2 텍스트2</li>
+		<li id="third">텍스트3 텍스트3 텍스트3 텍스트3 텍스트3</li>
+		<li id="fourth">텍스트4 텍스트4 텍스트4 텍스트4 텍스트4</li>
+		<li id="first">텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1</li> <!-- 동일한 id가 있는 경우, 맨 처음 id만 css 적용되므로, id겹치기 절대x -->
+	</ul>
+
+
+</body>
+<script type=text/javascript>
+
+	$("#second").css("color", "red"); //id=second인 값만 red로 바뀜.
+	$("#first").css("color", "blue"); //id=first인 첫번째 값만 red로 바뀜.
+</script>
+
+
+
+</html>

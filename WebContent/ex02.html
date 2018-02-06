@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script> <!-- 라이브러리 연결 확인 -->
+
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li> 순서1 순서1 순서1 순서1 순서1 </li>
+		<li> 순서2 순서2 순서2 순서2 순서2 </li>
+		<li> 순서3 순서3 순서3 순서3 순서3 </li>
+		<li> 순서4 순서4 순서4 순서4 순서4 </li>
+	</ul>
+	
+	<p> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </p>
+	<p> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </p>
+	<p> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </p>
+	<p> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </p>
+
+</body>
+<script type=text/javascript>
+	var obj=$("li"); //li 4개 모두 선택됨. 여기서 selector는 li
+	console.log(obj);
+	
+	$("li").css("color","red"); //선택된 4개의 li 모두 red로 바뀜
+	$("p").css("color","blue"); //선택된 4개의 p 모두 blue로 바뀜
+</script>
+
+
+</html>

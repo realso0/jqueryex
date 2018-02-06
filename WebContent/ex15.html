@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+
+	</ul>
+	<input id="btn" type="button" VALUE="li요소추가" />
+</body>
+
+<script type=text/javascript>
+	/*$("li").on("click", function() {
+		var $this=$(this); //li를 클릭했을 때, 현재 클릭한 것이 무엇인지 텍스트를 출력.
+		var str=$this.text();
+		console.log(str);
+	});*/
+
+	$("#btn").on("click", function() {
+		$("ul").prepend("<li>영번째 아이템입니다.</li>");
+		$("ul").append("<li>다섯번째 아이템입니다.</li>");
+		$("ul").append("<li>여섯번째 아이템입니다.</li>");
+		$("ul").append("<li>일곱번째 아이템입니다.</li>");
+	}); //추가된 것을 잡아내지 못함.
+	
+	$("ul").on("click", "li", function() { //li가 아닌 ul 클릭시로 변경, 무엇을 클릭하든, ul 하나로 보게됨.
+		var $this=$(this);
+		var str=$this.text();
+		console.log(str);
+		//"li"를 넣어줌으로써, 클릭 받았을 때, li에 이벤트를 내려보냄.
+	});
+	
+//브라우저가 한번 쫙 읽고, 이벤트를 전부 걸어놓기 때문에, 처음 로딩됬을 때, 클릭에 의해 생겨난 4개의 아이템에는 이벤트 연결을 못해놓은 상태임.
+//li를 감싸고 있는 것인 ul에 이벤트를 걸면, 추가된 것도 이벤트 연결됨.
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+
+</body>
+<script type=text/javascript>
+	$("li").on("click", function() {
+		//console.log("li출력"); 이렇게 하면 클릭한 것이 무엇인지 정확히 모름.
+		var $this=$(this); //변수이름은 이런식으로 많이 사용, $(this)를 이용해, 현재클릭한 것이 무엇인지 확인할 수 있음.
+		var str=$this.attr("id"); //이렇게 사용하면, id값만을 볼 수 있음.(주로 이렇게 사용)
+		console.log(str);
+	});
+	
+</script>
+
+</html>

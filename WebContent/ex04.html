@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="red">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="blue">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="red">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="blue">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li class="green">텍스트 텍스트 텍스트 텍스트 텍스트</li>
+	</ul>
+
+</body>
+
+<script type=text/javascript>
+	//class를 사용하면 id에서와 달리 특정한 여러 개 html에 접근하여 css 적용가능함.
+	$("li").css("color","green"); //선택된 4개의 li 모두 green로 바뀌었다가, class=red,blue 인것만 또 적용됨.
+	$(".red").css("color", "red");
+	$(".blue").css("color", "blue");
+</script>
+
+</html>
